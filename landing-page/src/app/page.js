@@ -266,7 +266,7 @@ export default function Home() {
                   Stay Updated
                 </h2>
                 <p className="mx-auto max-w-[600px] text-gray-400 md:text-xl">
-                  Join our mailing list to receive updates on Morton's
+                  Join our mailing list to receive updates on Morton&apos;s
                   development and community events.
                 </p>
               </div>
