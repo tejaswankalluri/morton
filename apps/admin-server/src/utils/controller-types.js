@@ -1,3 +1,5 @@
+import CustomErrorHandler from "../service/CustomHandler.service.js";
+``;
 /**
  * Higher-order function that takes a controller function and ensures it gets the correct types
  * @param {(req: import("express").Request, res: import("express").Response, next: Function) => Promise<void>} controller
@@ -12,7 +14,8 @@ export const withTypedRequestResponse = (controller) => {
     try {
       await controller(req, res, next);
     } catch (err) {
-      next(err);
+      console.log(err);
+      next(CustomErrorHandler.serverError());
     }
   };
 };

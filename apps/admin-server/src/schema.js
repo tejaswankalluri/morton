@@ -1,6 +1,6 @@
 import { pgTable, serial, varchar, pgEnum } from "drizzle-orm/pg-core";
 
-const ROLES = ["SUPERADMIN", "ADMIN"];
+export const ROLES = ["SUPERADMIN", "ADMIN"];
 export const rolesEnum = pgEnum("role", Object.values(ROLES));
 
 export const user = pgTable("user", {
