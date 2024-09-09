@@ -1,3 +1,4 @@
+import expressAsyncHandler from "express-async-handler";
 import CustomErrorHandler from "../service/CustomHandler.service.js";
 ``;
 /**
@@ -12,7 +13,7 @@ export const withTypedRequestResponse = (controller) => {
     /** @type {Function} */ next
   ) => {
     try {
-      await controller(req, res, next);
+      expressAsyncHandler(await controller(req, res, next));
     } catch (err) {
       console.log(err);
       next(CustomErrorHandler.serverError());

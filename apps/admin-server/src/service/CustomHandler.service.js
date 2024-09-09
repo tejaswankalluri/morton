@@ -20,9 +20,11 @@ class CustomErrorHandler extends Error {
   static badRequest(message = "bad Request") {
     return new CustomErrorHandler(400, message);
   }
+
   static accessDenied(message = "Access Denied") {
     return new CustomErrorHandler(403, message);
   }
+
   static notFound(message = "404 Not Found") {
     return new CustomErrorHandler(404, message);
   }
